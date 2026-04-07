@@ -1,6 +1,12 @@
-venv/
 __pycache__/
-*.pyc
+*.py[cod]
 *.pkl
-models/
+*.egg-info/
 .env
+venv/
+.venv/
+node_modules/
+dist/
+*.log
+.DS_Store
+
