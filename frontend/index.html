@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency AI Prioritizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">🚨 EmergencyAI</div>
+      <div class="status-pill" id="statusPill">● Connecting...</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <h1>Emergency Message Prioritizer</h1>
+      <p class="subtitle">AI-powered real-time triage for disaster response teams</p>
+
+      <div class="input-card">
+        <textarea id="messageInput" placeholder="Enter an emergency message...&#10;e.g. 'I am trapped under rubble'" rows="3"></textarea>
+        <div class="btn-row">
+          <button id="submitBtn" onclick="submitMessage()">Analyze Message</button>
+          <button id="demoBtn" onclick="loadDemo()" class="btn-secondary">Load Demo</button>
+          <button id="clearBtn" onclick="clearQueue()" class="btn-danger">Clear All</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-row" id="statsRow">
+      <div class="stat-card critical"><span id="criticalCount">0</span><label>Critical</label></div>
+      <div class="stat-card urgent"><span id="urgentCount">0</span><label>Urgent</label></div>
+      <div class="stat-card medium"><span id="mediumCount">0</span><label>Medium</label></div>
+      <div class="stat-card low"><span id="lowCount">0</span><label>Low</label></div>
+    </section>
+
+    <section class="queue-section">
+      <h2>Prioritized Message Queue</h2>
+      <div id="messageQueue" class="message-queue">
+        <div class="empty-state">No messages yet. Submit a message or load the demo.</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
